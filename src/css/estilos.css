@@ -1,0 +1,110 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+main:after {
+    content: '';
+    min-height: 100vh;
+    width: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.cont2 {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-evenly;
+}
+
+.info .logo {
+    min-width: 350px;
+    filter: invert(1);
+    margin-bottom: 80px;
+}
+
+.info .desc {
+    width: 49%;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.bts{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.bts .bt {
+    background-color: #000000;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    border-color: #000000;
+}
+
+.bts .bt.select {
+    background-color: #ffffff;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu .icon {
+    width: 80px;
+    transition: 0.3s ease-in-out;
+    border-radius: 50%;
+}
+
+.menu .icon:hover {
+    transform: scale(1.2);
+}
+
+.cont {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.cont .img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: none;
+    animation: mudarImagem 0.7s;
+}
+
+.cont .img.at {
+    display: block;
+} 
+
+@keyframes mudarImagem {
+    from {
+        opacity: 0.85;
+    }
+    to {
+        opacity: 1;
+    }
+}
